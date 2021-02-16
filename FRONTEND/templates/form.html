@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>doge meme</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<h1 class="hes">Doge meme</h1>
+
+	<div class="collapsible" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar1">Post</div>
+</div>
+<div class="content">
+    <form method="POST" action="{{url_for('form')}}" style="
+    margin-top: 1.5vw">
+		{{ form.csrf_token }}
+		{{form.name.label(class_='box_label')}} 
+		{{ form.name(class_='box_name')}}
+		<br><br>
+		{{form.caption.label(class_='box_label')}}
+		{{ form.caption(class_='box_caption') }}
+		<br><br>
+		{{form.url.label(class_='box_label')}}
+		{{ form.url(class_='box_url')}}
+		<ul>
+		{% for error in form.url.errors %}
+			<li style="color:red;font-size:medium;">{{error}}</li>
+		 {% endfor %}
+	   </ul>
+ 		<br><br>
+ 		<button class = 'submitbut' type ='submit' value = "submit">Semnd</button>
+	</form>
+</div>
+
+
+   	 <ul>
+   	 	{% for nn in m_name | reverse  %}
+   	 	<div class="card">
+   	 	<span style="font-size:x-large; margin: 3px">{{nn['caption']}}</span><br>
+   	 	<img class = "img-my" src={{nn['url']}} style="width:80%;" >
+   	 	 <div class="container">
+   	 		<span style="font-size:medium;">@{{nn['name']}}</span><br>
+   	 	</div>
+   	 </div>
+   
+   	 		
+   	 	{% endfor %}
+   	 </ul>
+  
+
+
+
+	
+		
+	
+	<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+	
+</body>
+</html>
