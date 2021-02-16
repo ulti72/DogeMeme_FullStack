@@ -13,8 +13,8 @@ You need [Node.js](https://nodejs.org/en/) installed (>=12.14.1), [Python 3+](ht
 Download from GitLab:
 
 ```bash
-$ git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/abhishekpro47-me_buildout_xmeme.git
-$ cd abhishekpro47-me_buildout_xmeme
+$ git clone https://github.com/ulti72/DogeMeme_FullStack.git
+$ cd DogeMeme_FullStack
 ```
 
 
