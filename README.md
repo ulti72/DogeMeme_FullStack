@@ -43,7 +43,7 @@ $ pip install requirements.txt
 $ node index.js
 ```
 
-Point your browser to http://localhost:8080/ to view the backend data.
+Point your browser to http://localhost:8081/ to view the backend data.
 
 #### Frontend
 
