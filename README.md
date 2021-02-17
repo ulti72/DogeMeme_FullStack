@@ -10,7 +10,7 @@ You need [Node.js](https://nodejs.org/en/) installed (>=12.14.1), [Python 3+](ht
 
 ## Getting Started
 
-Download from GitLab:
+Download from GitHub:
 
 ```bash
 $ git clone https://github.com/ulti72/DogeMeme_FullStack.git
