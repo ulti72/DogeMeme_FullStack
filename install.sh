@@ -35,3 +35,4 @@ nvm install node
  
 #check the version
 node --version
+ 
