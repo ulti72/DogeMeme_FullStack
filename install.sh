@@ -7,13 +7,13 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 sudo apt-get update
 #Install the MongoDB packages
 sudo apt-get install -y mongodb-org
-#Installation is done, now lets start mongodb 
+#Installation is done, now lets start mongodb
 sudo systemctl start mongod
 #Ensure that MongoDB will start following a system reboot
 sudo systemctl enable mongod
 #Node Setup
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-.~/.nvm/nvm.sh 
+.~/.nvm/nvm.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
