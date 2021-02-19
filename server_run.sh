@@ -1,6 +1,5 @@
 #!/bin/bash
 
-.~/.nvm/nvm.sh
 
 export NVM_DIR="$HOME/.nvm"
 
